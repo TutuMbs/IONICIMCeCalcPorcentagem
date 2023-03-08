@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Digite sua Altura</ion-label>
+      <ion-input [(ngModel)]="n1" type="number"></ion-input>
+    </ion-item>
+  
+    <ion-button expand="block" (click)="homem()">Homem</ion-button>
+    <ion-button expand="block" (click)="mulher()">Mulher</ion-button>
+  
+    <ion-input  [readonly]="true" value="{{res}}"></ion-input>
+
+
+      <ion-radio-group [(ngModel)]="radioSelecionada">
+        <ion-item>
+          <ion-label position="floating">Digite o valor a pagar</ion-label>
+          <ion-input [(ngModel)]="n2" type="number"></ion-input>
+        </ion-item>
+        <ion-list-header> Escolha uma opção: </ion-list-header>
+        <ion-item>
+          <ion-label>Pix</ion-label>
+          <ion-radio value="Pix"></ion-radio>
+        </ion-item>
+        <ion-item> 
+          <ion-label>Débito</ion-label>
+          <ion-radio value="Débito"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Crédito</ion-label>
+          <ion-radio value="Crédito"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button (click)="verificarRadio()">Verificar seleção</ion-button>
+</ion-content>
+
+
